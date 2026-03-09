@@ -1,91 +1,72 @@
-# 产品需求文档 (PRD): 物理增强型力场参数化平台 (Physics-Informed GNN FF)
+# 产品需求文档 (PRD): PhyNEO-AutoParam 2.0
 
-## 1. 项目概述 (Overview)
-
-### 1.1 背景
-传统的极化力场（如 AMOEBA, DMFF）开发存在一个巨大的瓶颈：**可移植性差与参数化成本高**。每引入一个新分子，都需要进行昂贵的量子化学计算和极不稳定的能量拟合。
-我们目前拥有两套成熟的局部方案：
-1. **纯物理推导 (`Auto-Multipol`)**：利用 PySCF+MBIS，基于有效原子体积 ($V_{eff}$) 和物理缩放律（如 $V^{10/3}$）快速得到各向同性的极化率和色散系数 ($C_6, C_8, C_{10}$)。
-2. **纯数据拟合 (`train_dimer_backend`)**：基于 JAX 和 DMFF，通过二聚体相互作用能（SAPT），反向拟合短程 Slater 斥力参数 ($A, B$)。
-
-### 1.2 核心目标
-本项目旨在创建一个**全新的代码仓库**，将上述两套逻辑通过**图神经网络 (GNN)** 统一起来。
-最关键的技术跨越是：**将原先基于 PyTorch 的 GNN (`byteff2/model/gnn.py`) 彻底重写为 JAX 架构**。这样可以直接与 JAX 原生的 `DMFF` (Differentiable Molecular Force Field) 无缝打通，实现从“图结构输入”到“总能量梯度”的**端到端全可微训练**。
+## 1. 愿景与定位
+PhyNEO-AutoParam 是一个高度模块化的、基于 JAX 的物理增强型力场参数化平台。它借鉴了 `bytemol` 的化学信息学底座和 `byteff2` 的混合力场建模思路，通过 JAX 的全可微特性与 DMFF 引擎无缝耦合，实现“SMILES/XYZ -> 高精度极化力场参数”的端到端自动化。
 
 ---
 
-## 2. 核心系统架构 (System Architecture)
+## 2. 模块化架构设计 (Architectural Layers)
 
-整个系统分为三大模块，形成一个闭环的“数据生产 -> 模型预测 -> 能量求导”流水线。
+项目分为四个核心层，严格遵循“数据-图-特征-参数-能量”的流转逻辑。
 
-### 2.1 模块一：自动化数据对齐与特征工程 (Data Distillation)
-**目标**：整合现有脚本产出的分散数据，生成标准的 JAX-GNN 训练集。
-- **输入**：分子坐标、拓扑结构。
-- **物理锚点 (Targets_Phys)**：从单分子计算中提取 $V_{eff}, \alpha, C_n$。
-- **能量标签 (Targets_Energy)**：从二聚体扫描中提取 SAPT 能量分解（Ex, Es, Pol, Disp, DHF）。
-- **输出**：结构化的 `.npz` 或 `.hdf5` 数据集，包含原子级的图特征和节点目标值。
+### 2.1 基础核心层 (Core Layer) - 参考 `bytemol/core/`
+**目标**：构建分子的“物理语义”对象。
+- **Molecule 类**：封装 RDKit，支持从 SMILES (mapped) 和 XYZ 构造。
+- **拓扑引擎**：自动识别键连、环结构、共振态及对称性。
+- **JAX 适配器**：将 RDKit 分子图转换为 `jraph.GraphsTuple`，包括原子序数、键属性（类型、共轭性）以及初始坐标。
 
-### 2.2 模块二：JAX-GNN 物理参数预测器 (Param-Predictor GNN)
-**目标**：用 JAX (如 `Jraph` 或 `Flax`) 重写原有的 PyTorch GNN，负责从化学环境预测物理参数。
-- **输入层**：原子的 One-hot 编码、配位数、键属性等。
-- **消息传递层 (Message Passing)**：学习原子的局部拥挤度与电荷分布环境。
-- **物理约束读出层 (Physics-Informed Readout)**：
-  - **网络预测**：网络**不**直接预测所有的参数。它主要预测两个核心变量：
-    1. 体积缩放因子 $\kappa_i \approx V_i^{eff} / V_i^{free}$
-    2. Slater 斥力强度预选值 $A_{raw}$
-  - **硬编码物理层**：
-    - $C_{10,i} = C_{10}^{free} \times \kappa_i^{10/3}$ (严格遵守物理定律)
-    - $B_i = \text{const} \cdot (\kappa_i)^{-1/3}$ (衰减常数由体积决定)
-- **输出**：完整的力场参数字典（$\alpha, C_n, A, B$ 等）。
+### 2.2 特征提取层 (Graph Block) - 参考 `byteff2/model/gnn.py`
+**目标**：从图结构中提取原子的局部化学环境特征。
+- **算子选择**：利用 JAX/Jraph 实现 **EGT (Edge-augmented Graph Transformer)** 或带有注意力机制的 **GTConv**。
+- **特征演化**：
+  - 节点特征：学习原子局部拥挤度、电负性梯度。
+  - 边特征：学习键级、电荷转移路径。
+- **技术优势**：全 JAX 实现，支持 XLA 编译下的超大规模批处理。
 
-### 2.3 模块三：DMFF 端到端联合训练 (E2E JAX Training)
-**目标**：将 GNN 的输出直接喂给 DMFF，通过计算能量误差来更新 GNN 的权重。
-- **联合损失函数 (Joint Loss)**：
-  $Loss = \lambda_{E} \cdot MSE(E_{DMFF\_pred}, E_{SAPT}) + \lambda_{Phys} \cdot MSE(\kappa_{pred}, \kappa_{MBIS\_target})$
-- **技术优势**：因为 GNN 和 DMFF 都在 JAX 下，我们可以直接调用 `jax.value_and_grad(Loss)`，计算力场能量关于 GNN 网络权重的梯度，实现真正的“端到端”。
+### 2.3 物理生成层 (FF Block) - 参考 `byteff2/ff_layers/`
+**目标**：将隐藏层 Embedding 映射为具有物理约束的力场参数。
+- **ChargeVolume 模块**：预测原子电荷及有效体积因子 $\kappa_i$。
+- **Dispersion 模块**：利用 `auto_multipol.py` 中的逻辑，根据 $\kappa_i$ 自动推导 $C_6, C_8, C_{10}$。
+- **ShortRange 模块**：
+  - 预测 Slater 斥力强度 $A$。
+  - 按照 $B \propto \kappa^{-1/3}$ 物理缩放定律生成衰减常数 $B$。
+- **Bonded 模块**：预测键、角、扭转角的力常数。
 
----
-
-## 3. 关键路径与参考代码 (References & Integration)
-
-新 Repo 的开发将大量复用和改造以下现有代码资产：
-
-1. **物理基准生成器** (提供 $V_{eff}, C_n$ 的 Ground Truth)：
-   - **路径**：`/home/jmchen/project/PhyNEO/workflow/lr_param_multiwfn/auto_multipol.py`
-   - **作用**：在新框架中作为离线的数据生产工具。
-
-2. **GNN 网络架构原型** (需由 PyTorch 翻译为 JAX)：
-   - **路径**：`/home/jmchen/project/polff/byteff2/model/gnn.py`
-   - **作用**：参考其 `GTConv` 和 `EGTConv` 的注意力机制，利用 JAX/Jraph 重新实现图卷积。
-
-3. **DMFF 能量评估与优化器底座** (提供物理引擎)：
-   - **路径**：`/home/jmchen/project_water_ethanol/phyneo-water-ethanol/train_dimer_backend.py`
-   - **作用**：提取其 `PairKernel` 类的计算逻辑。原本这部分是用 Optax 直接更新离散的参数字典，新框架中将改为：`GNN(Graph) -> Params -> PairKernel -> Energy -> Loss -> Optax(Update GNN Weights)`。
+### 2.4 物理计算层 (Engine Layer) - 集成 `DMFF`
+**目标**：利用预测的参数计算势能，驱动参数优化。
+- **集成方式**：将 FF Block 的输出直接映射到 DMFF 的 `Hamiltonian` 参数树。
+- **能量评估**：调用 `train_dimer_backend.py` 中的 `PairKernel` 逻辑进行 JAX 加速的能量计算。
 
 ---
 
-## 4. 实施阶段 (Development Roadmap)
+## 3. 端到端工作流 (End-to-End Workflow)
 
-### Phase 1: 数据流建设 (Data Pipeline)
-- 编写脚本，批量运行 `auto_multipol.py`，并将结果与现有的 Dimer SAPT 扫描数据（如 `data_sr.pickle`）进行对齐。
-- 构建图数据集构建器（将 XYZ 转换为 Jraph 的 `GraphsTuple`）。
+### Step 1: 数据准备 (Distillation)
+- 使用 `/home/jmchen/project/PhyNEO/workflow/lr_param_multiwfn/auto_multipol.py` 生成物理锚点标签（$\alpha, C_n, V_{eff}$）。
+- 使用 SAPT 计算二聚体能量拆解标签。
 
-### Phase 2: GNN 的 JAX 移植与单分子预训练 (JAX-GNN Translation)
-- 使用 `Flax` 和 `Jraph` 复现 `byteff2/gnn.py` 中的网络结构。
-- 进行**单分子预训练 (Pre-training)**：仅使用物理 Loss（拟合 $V_{eff}$ 和 $\alpha$），验证 GNN 能够学到 MBIS 的空间划分逻辑。
+### Step 2: 模型训练 (JAX Training)
+- **阶段 A (物理预训练)**：GNN 拟合单分子的物理锚点。
+- **阶段 B (联合微调)**：GNN 接入 DMFF，通过拟合二聚体相互作用能（Ex, Es, Pol, Disp, DHF）对 Slater $A$ 参数进行微调。
+- **损失函数**：
+  $Loss = \sum (\lambda_{phys} \cdot Loss_{Phys} + \lambda_{energy} \cdot Loss_{Energy})$
 
-### Phase 3: DMFF 耦合与二聚体微调 (End-to-End Fine-tuning)
-- 将训练好的 JAX-GNN 插入到 `train_dimer_backend.py` 的流程中。
-- 替换原来基于 `random` 初始化的参数树，改为调用 GNN 推理得到参数树。
-- 开启联合训练，利用 SAPT 能量微调 GNN 最后一层输出的 $A$（Slater 斥力强度）。
-
-### Phase 4: 泛化测试 (Validation)
-- 挑选一个训练集中未出现过的新分子（如全新的溶剂或阴离子）。
-- 送入 GNN 获得参数，直接生成 `ec_dmff_ff.xml`，评估其二聚体能量误差。如果成功，标志着平台具备了“Zero-shot 泛化”的力场生成能力。
+### Step 3: 一键参数化 (Deployment)
+- 用户输入：`SMILES`
+- 输出：`FF.xml` (DMFF/OpenMM 格式)
 
 ---
 
-## 5. 预期收益 (Expected Outcomes)
-- **极速参数化**：新分子的参数生成从**数天/周**缩短至**几毫秒**（一次 GNN 推理）。
-- **物理鲁棒性**：告别“纯能量拟合”带来的病态解，所有长程极化/色散参数均受 $V_{eff}$ 物理锚点保护。
-- **全生态闭环**：彻底统一技术栈至 JAX，享受 XLA 编译在 GPU 上的极致加速。
+## 4. 关键代码参考 (Source Map)
+- **化学底座**：`/home/jmchen/project/polff/bytemol/core/`
+- **GNN 算子**：`/home/jmchen/project/polff/byteff2/model/gnn.py`
+- **物理层逻辑**：`/home/jmchen/project/PhyNEO/workflow/lr_param_multiwfn/auto_multipol.py`
+- **JAX 训练底座**：`/home/jmchen/project_water_ethanol/phyneo-water-ethanol/train_dimer_backend.py`
+
+---
+
+## 5. 开发路线图
+1. **[Core]** 构建 JAX 兼容的 `Molecule` 数据结构。
+2. **[Model]** 移植 EGT/GTConv 到 JAX/Flax。
+3. **[Physics]** 实现全物理约束的 Readout 层。
+4. **[Training]** 打通 GNN -> DMFF -> Loss 的全求导链条。
