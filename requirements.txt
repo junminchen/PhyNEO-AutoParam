@@ -1,0 +1,7 @@
+numpy<2.0.0
+pyscf
+gpu4pyscf; sys_platform == 'linux'
+horton-part
+qc-grid
+qc-iodata
+scipy==1.12.0
