@@ -69,6 +69,7 @@ def distill_data(results_dir, output_file):
                     "slater_A_disp": float(fitted_params['SlaterSrDispForce']['A'][i]),
                     "slater_A_dhf": float(fitted_params['SlaterSrDhfForce']['A'][i]),
                     # B is typically consistent across these forces in DMFF
+                "slater_b_init": atom["slater_b_init"],
                     "slater_B": float(fitted_params['SlaterExForce']['B'][i]) if hasattr(fitted_params['SlaterExForce']['B'], '__len__') else float(fitted_params['SlaterExForce']['B'])
                 }
                 mol_entry["atoms"].append(atom_entry)

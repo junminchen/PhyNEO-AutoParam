@@ -27,7 +27,7 @@ class MoleculeAnalyzer:
     and HORTON 3/MBIS for density partitioning.
     Supports physical derivation of C6, C8, C10 and Slater B.
     """
-    def __init__(self, input_path, basis='aug-cc-pVTZ', xc='wb97x-d', charge=0, spin=0, use_gpu=False):
+    def __init__(self, input_path, basis='aug-cc-pVTZ', xc='cam-b3lyp', charge=0, spin=0, use_gpu=False):
         self.input_path = Path(input_path)
         self.basis = basis
         self.xc = xc
@@ -182,13 +182,14 @@ def main():
     parser = argparse.ArgumentParser(description="Auto-Multipol Physics Engine (PhyNEO Edition)")
     parser.add_argument("-i", "--input", required=True, help="Input XYZ file")
     parser.add_argument("-b", "--basis", default="aug-cc-pVTZ", help="Basis set")
-    parser.add_argument("-f", "--functional", default="wb97x-d", help="DFT Functional")
+    parser.add_argument("-f", "--functional", default="cam-b3lyp", help="DFT Functional")
     parser.add_argument("-o", "--output", default="params.json", help="Output JSON file")
+    parser.add_argument("--charge", type=int, default=0, help="Total charge of the molecule")
     parser.add_argument("--gpu", action="store_true", help="Enable GPU acceleration")
     
     args = parser.parse_args()
     try:
-        analyzer = MoleculeAnalyzer(args.input, basis=args.basis, xc=args.functional, use_gpu=args.gpu)
+        analyzer = MoleculeAnalyzer(args.input, basis=args.basis, xc=args.functional, use_gpu=args.gpu, charge=args.charge)
         results = analyzer.run_pipeline()
         with open(args.output, 'w') as f:
             json.dump(results, f, indent=4)
