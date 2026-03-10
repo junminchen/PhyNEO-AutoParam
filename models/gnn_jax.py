@@ -5,7 +5,6 @@ import jraph
 from typing import Callable, Optional, Dict, Any
 
 # Reference constants for TS Model scaling (Updated for Li-Cl, Na, Si)
-# alpha (Bohr^3), volume (Bohr^3), C6 (a.u.), C8 (a.u.), C10 (a.u.), B_ref (nm^-1)
 ATOM_REF = {
     1:  (4.5, 14.1, 6.5, 124.4, 3286.0, 40.0),    # H
     3:  (164.0, 110.0, 1390.0, 40000.0, 800000.0, 30.0), # Li
@@ -51,18 +50,28 @@ class GTLayer(nn.Module):
         return new_graph._replace(nodes=nodes, edges=edges)
 
 class FFBlock(nn.Module):
+    """
+    Enhanced FF Block: Supports physical derivation AND machine-learned refinement for Slater B.
+    """
     @nn.compact
     def __call__(self, latent, atomic_numbers):
-        raw_out = MLP([64, 32, 6])(latent)
-        kappa = nn.sigmoid(raw_out[:, 0]) * 2.0
-        A_coeffs = jnp.exp(raw_out[:, 1:]) * 100.0
+        # [kappa, A_ex, A_es, A_pol, A_disp, A_dhf, B_refine]
+        raw_out = MLP([64, 32, 7])(latent)
         
-        # We'll use a lookup-table approach for vectorized atom-specific constants
-        # In this skeleton, we'll process them to return physical params
+        kappa = nn.sigmoid(raw_out[:, 0]) * 2.0
+        A_coeffs = jnp.exp(raw_out[:, 1:6]) * 100.0
+        B_refine = nn.tanh(raw_out[:, 6]) * 0.1 # Small delta correction (-10% to +10%)
+        
+        # Calculate B_base from Veff-scaling logic
+        # For simplicity in this JAX skeleton, we use a placeholder for vectorized atom constants
+        B_base = 35.0 * (kappa ** (-1.0/3.0)) 
+        B_final = B_base * (1.0 + B_refine) # Refine the B parameter in Phase 3
+        
         return {
             "kappa": kappa,
             "A_ex": A_coeffs[:, 0], "A_es": A_coeffs[:, 1],
-            "A_pol": A_coeffs[:, 2], "A_disp": A_coeffs[:, 3], "A_dhf": A_coeffs[:, 4]
+            "A_pol": A_coeffs[:, 2], "A_disp": A_coeffs[:, 3], "A_dhf": A_coeffs[:, 4],
+            "B": B_final
         }
 
 class PhyNEO_GNN_V2(nn.Module):
