@@ -22,6 +22,14 @@ class Molecule:
             raise ValueError(f"Invalid SMILES: {smiles}")
         mol = Chem.AddHs(mol)
         AllChem.EmbedMolecule(mol, AllChem.ETKDG())
+        
+        # Initialize PDBResidueInfo for all atoms to allow naming
+        for atom in mol.GetAtoms():
+            info = Chem.AtomPDBResidueInfo()
+            info.SetResidueName("MOL")
+            info.SetResidueNumber(1)
+            atom.SetPDBResidueInfo(info)
+            
         return cls(mol, name or smiles)
 
     @classmethod
@@ -38,23 +46,22 @@ class Molecule:
 
     def get_graph(self) -> jraph.GraphsTuple:
         """
-        Converts the molecule into a jraph.GraphsTuple.
+        Converts the molecule into a jraph.GraphsTuple with enriched features.
         """
-        # 1. Node Features: [Atomic Number, Formal Charge, Hybridization, Is_In_Ring]
         node_features = []
-        atomic_numbers = []
         for atom in self.rdmol.GetAtoms():
-            atomic_numbers.append(atom.GetAtomicNum())
             features = [
-                atom.GetAtomicNum(),
-                atom.GetFormalCharge(),
-                int(atom.GetHybridization()),
-                float(atom.GetIsInRing()),
+                float(atom.GetAtomicNum()),
+                float(atom.GetHybridization()), # RDKit HybridizationType enum
+                float(atom.GetFormalCharge()),
+                float(atom.GetTotalValence()),
+                float(atom.GetImplicitValence()),
+                float(atom.IsInRing()),
                 float(atom.GetIsAromatic())
             ]
             node_features.append(features)
         
-        # 2. Edge Features: [Bond Type, Is_Conjugated, Is_In_Ring]
+        # 2. Edge Features: [Bond Type, Is_Conjugated, Is_In_Ring, Is_Stereo]
         senders = []
         receivers = []
         edge_features = []
@@ -70,15 +77,13 @@ class Molecule:
             b_feat = [
                 float(bond.GetBondTypeAsDouble()),
                 float(bond.GetIsConjugated()),
-                float(bond.GetIsInRing())
+                float(bond.IsInRing()),
+                float(bond.GetStereo() != Chem.rdchem.BondStereo.STEREONONE)
             ]
             edge_features.extend([b_feat, b_feat])
 
         return jraph.GraphsTuple(
-            nodes={
-                'features': jnp.array(node_features),
-                'atomic_numbers': jnp.array(atomic_numbers)
-            },
+            nodes=jnp.array(node_features),
             edges=jnp.array(edge_features),
             senders=jnp.array(senders),
             receivers=jnp.array(receivers),

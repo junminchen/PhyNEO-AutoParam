@@ -27,7 +27,7 @@ class MoleculeAnalyzer:
     and HORTON 3/MBIS for density partitioning.
     Supports physical derivation of C6, C8, C10 and Slater B.
     """
-    def __init__(self, input_path, basis='aug-cc-pVTZ', xc='cam-b3lyp', charge=0, spin=0, use_gpu=False):
+    def __init__(self, input_path, basis='def2-TZVP', xc='wb97xd', charge=0, spin=0, use_gpu=False):
         self.input_path = Path(input_path)
         self.basis = basis
         self.xc = xc

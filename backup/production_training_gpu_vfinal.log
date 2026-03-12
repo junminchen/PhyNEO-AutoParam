@@ -1,0 +1,37 @@
+--- PhyNEO Joint Trainer Script Started ---
+--- Loading and Featurizing 190 molecules ---
+  Progress: 0/190 molecules processed...
+  Progress: 20/190 molecules processed...
+  Progress: 40/190 molecules processed...
+  Progress: 60/190 molecules processed...
+  Progress: 80/190 molecules processed...
+  Progress: 100/190 molecules processed...
+  Progress: 120/190 molecules processed...
+  Progress: 140/190 molecules processed...
+  Progress: 160/190 molecules processed...
+  Progress: 180/190 molecules processed...
+--- Finished loading 190 molecules ---
+=== Starting Production Training Phase [GPU Enabled] ===
+Dataset Size: 190 molecules
+Target Epochs: 5000
+E0312 09:57:53.678086 3218283 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0312 09:58:20.230654 3218384 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0312 09:58:25.264482 3218378 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0312 09:58:30.580678 3218237 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0312 09:59:20.636922 3218264 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0312 09:59:30.549821 3218321 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0312 09:59:43.694613 3218315 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0312 10:01:15.000694 3218347 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0312 10:01:49.749558 3218320 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+Epoch     1 | Avg Loss: 1.23472500
+Epoch   500 | Avg Loss: 0.00480169
+Epoch  1000 | Avg Loss: 0.00433167
+Epoch  1500 | Avg Loss: 0.00410824
+Epoch  2000 | Avg Loss: 0.00389398
+Epoch  2500 | Avg Loss: 0.00366432
+Epoch  3000 | Avg Loss: 0.00352134
+Epoch  3500 | Avg Loss: 0.00340642
+Epoch  4000 | Avg Loss: 0.00333924
+Epoch  4500 | Avg Loss: 0.00329389
+Epoch  5000 | Avg Loss: 0.00327977
+Production training finished. Best Avg Loss: 0.00327977

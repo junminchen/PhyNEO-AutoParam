@@ -1,60 +1,60 @@
-import argparse
-import os
-import sys
-from pathlib import Path
-
-# Add project root to path to import local modules
-project_root = str(Path(__file__).resolve().parent.parent)
-sys.path.insert(0, project_root)
-
+import jax
+import jax.numpy as jnp
 from core.molecule import Molecule
-from physics.multipole_engine import MoleculeAnalyzer
+from models.gnn_jax import PhyNEO_GNN_V2
+import argparse
+from rdkit import Chem
 
-def process_smiles(smiles_list, output_dir, basis, xc):
-    """
-    Automates the pipeline from SMILES to high-precision physical anchors.
-    """
-    output_dir = Path(output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+from scripts.params_to_xml import generate_dmff_xml
+import os
+
+def predict_parameters(smiles_list, weights_path=None):
+    # 1. Initialize Model
+    model = PhyNEO_GNN_V2(hidden_dim=128, num_layers=4)
+    rng = jax.random.PRNGKey(42)
     
-    for i, smiles in enumerate(smiles_list):
-        mol_name = f"mol_{i:03d}"
-        print(f"\n[SMILES Pipeline] Processing: {smiles} as {mol_name}")
-        
+    print(f"=== PhyNEO-AutoParam Inference Engine ===")
+    
+    for smiles in smiles_list:
         try:
-            # 1. SMILES -> 3D via RDKit
-            mol_obj = Molecule.from_smiles(smiles, name=mol_name)
-            xyz_path = output_dir / f"{mol_name}.xyz"
+            mol_obj = Molecule.from_smiles(smiles)
+            graph = mol_obj.get_graph()
+            total_q = float(Chem.GetFormalCharge(mol_obj.rdmol))
             
-            # Save temporary XYZ for the physics engine
-            coords = mol_obj.get_coords()
-            symbols = [atom.GetSymbol() for atom in mol_obj.rdmol.GetAtoms()]
+            # Init & Inference
+            variables = model.init(rng, graph, total_charge=total_q)
+            params = model.apply(variables, graph, total_charge=total_q)
             
-            with open(xyz_path, 'w') as f:
-                f.write(f"{len(symbols)}\nGenerated from SMILES: {smiles}\n")
-                for sym, c in zip(symbols, coords):
-                    f.write(f"{sym:2s} {c[0]:12.6f} {c[1]:12.6f} {c[2]:12.6f}\n")
+            print(f"\nMolecule: {smiles}")
             
-            # 2. 3D XYZ -> Physical Anchors via Multipole Engine
-            json_out = output_dir / f"{mol_name}_results.json"
-            analyzer = MoleculeAnalyzer(str(xyz_path), basis=basis, xc=xc)
-            results = analyzer.run_pipeline()
+            # Generate XML & PDB
+            safe_name = smiles.replace("/", "_").replace("(", "_").replace(")", "_")
+            out_dir = f"results_inference/{safe_name}"
+            os.makedirs(out_dir, exist_ok=True)
             
-            import json
-            with open(json_out, 'w') as f:
-                json.dump(results, f, indent=4)
-                
-            print(f"[Success] Physical anchors saved to {json_out}")
+            # 1. Save FF.xml
+            xml_path = os.path.join(out_dir, "FF.xml")
+            generate_dmff_xml(mol_obj.rdmol, params, xml_path)
+            
+            # 2. Save PDB (Align atom names with XML)
+            pdb_path = os.path.join(out_dir, "structure.pdb")
+            # Set atom names in RDKit molecule before writing
+            for i, atom in enumerate(mol_obj.rdmol.GetAtoms()):
+                atom_name = f"{atom.GetSymbol()}{i}"
+                # PDB atom names are max 4 chars, handle carefully if needed
+                atom.GetPDBResidueInfo().SetName(f"{atom_name:<4}")
+                atom.GetPDBResidueInfo().SetResidueName("MOL")
+            
+            Chem.MolToPDBFile(mol_obj.rdmol, pdb_path)
+            print(f"PDB Structure saved to: {pdb_path}")
             
         except Exception as e:
-            print(f"[Error] Failed to process {smiles}: {e}")
+            print(f"Error processing {smiles}: {e}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Convert SMILES directly to high-precision physical anchors.")
-    parser.add_argument("-s", "--smiles", nargs="+", required=True, help="One or more SMILES strings")
-    parser.add_argument("-o", "--output", default="data/processed_smiles", help="Output directory")
-    parser.add_argument("-b", "--basis", default="aug-cc-pVTZ", help="Basis set")
-    parser.add_argument("-f", "--functional", default="wb97x-d", help="DFT Functional")
+    parser = argparse.ArgumentParser(description="Predict force field parameters from SMILES.")
+    parser.add_argument("smiles", nargs="+", help="One or more SMILES strings")
+    # parser.add_argument("--weights", help="Path to trained flax weights")
     
     args = parser.parse_args()
-    process_smiles(args.smiles, args.output, args.basis, args.functional)
+    predict_parameters(args.smiles)
