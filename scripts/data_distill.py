@@ -63,7 +63,9 @@ def distill_data(results_dir, output_file):
                     "quadrupole": atom.get('quadrupole', [[0,0,0],[0,0,0],[0,0,0]]),
                     "v_eff": atom['volume_eff'],
                     "alpha": atom.get('alpha_iso', 0.0),
-                    "c6": atom.get('c6_ii', 0.0)
+                    "c6": atom.get('c6_ii', 0.0),
+                    "c8": atom.get('c8_ii', 0.0),
+                    "c10": atom.get('c10_ii', 0.0)
                 }
                 mol_entry["atoms"].append(atom_entry)
             master_data.append(mol_entry)

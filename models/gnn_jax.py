@@ -162,13 +162,18 @@ class FFBlock(nn.Module):
         dipole = multipoles[:, 0:3] * 0.1 # Small initial scale
         quadrupole = multipoles[:, 3:9] * 0.01
 
-        # 3. Dispersion Scaling (C_n proportional to kappa^m)
-        # Ref: C6 ~ kappa^2, C8 ~ kappa^2.66, C10 ~ kappa^3.33
-        c6 = (kappa_base ** 2.0) * 1e-3
-        c8 = (kappa_base ** 2.66) * 1e-4
-        c10 = (kappa_base ** 3.33) * 1e-5
-
+        # 3. Dispersion & Polarizability Scaling (Physics-Consistent)
+        # alpha ~ ratio^1, C6 ~ ratio^2, C8 ~ ratio^2.66, C10 ~ ratio^3.33
+        # ratio is derived from learned scaling factor applied to kappa_base
+        scaling_params = MLP([32, 1], name="scaling_head")(node_latent)
+        ratio = nn.softplus(scaling_params[:, 0]) * kappa_base
+        
+        alpha = ratio * 1.0
+        c6 = (ratio ** 2.0) * 10.0
+        c8 = (ratio ** 2.66) * 100.0
+        c10 = (ratio ** 3.33) * 1000.0
         # 4. SAPT & Short-range B
+
         sapt_params = MLP([64, 32, 6])(node_latent)
         A_coeffs = jnp.exp(sapt_params[:, :5]) * 100.0
         B_base = 35.0 * (kappa_base ** (-1.0/3.0))
@@ -193,6 +198,7 @@ class FFBlock(nn.Module):
 
         return {
             "q": q_final, "kappa": kappa_final, "chi": chi, "eta": eta,
+            "alpha": alpha,
             "dipole": dipole, "quadrupole": quadrupole,
             "c6": c6, "c8": c8, "c10": c10,
             "A_ex": A_coeffs[:, 0], "A_es": A_coeffs[:, 1],

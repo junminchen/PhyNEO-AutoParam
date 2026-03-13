@@ -1,0 +1,19 @@
+# Bytecode/Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Logs and temporary results
+*.log
+results/
+training_quick.log
+
+# Large binary models (optional, but good practice if using Git LFS)
+# models/*.flax
+
+# Environment
+.env
+venv/
+env/
