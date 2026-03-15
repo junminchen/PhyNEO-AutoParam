@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<ForceField>
+  <AtomTypes>
+    <Type name="0" class="Li" element="Li" mass="6.941"/>
+  </AtomTypes>
+  <Residues>
+    <Residue name="Li">
+      <Atom name="Li0" type="0"/>
+    </Residue>
+  </Residues>
+  <ADMPPmeForce lmax="2" mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00" pScale12="0.00" pScale13="0.00" pScale14="0.00" pScale15="0.00" pScale16="0.00" dScale12="1.00" dScale13="1.00" dScale14="1.00" dScale15="1.00" dScale16="1.00">
+    <Atom type="0" c0="1.00000000" dX="0.05198113" dY="0.00367060" dZ="0.04087510" qXX="-0.00000492" qXY="-0.00003826" qYY="0.00000537" qXZ="0.00000499" qYZ="-0.00003585" qZZ="-0.00000045"/>
+    <Polarize type="0" polarizabilityXX="2.000000e-03" polarizabilityYY="2.000000e-03" polarizabilityZZ="2.000000e-03" thole="0.33"/>
+  </ADMPPmeForce>
+  <ADMPDispPmeForce mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="1.00">
+    <Atom type="0" C6="4.000000e-03" C8="6.320331e-04" C10="1.005611e-04"/>
+  </ADMPDispPmeForce>
+  <SlaterExForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="151.3404" B="27.2871"/>
+  </SlaterExForce>
+  <SlaterSrEsForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="52.7390" B="27.2871" Q="1.00000000"/>
+  </SlaterSrEsForce>
+  <SlaterSrPolForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="71.0996" B="27.2871"/>
+  </SlaterSrPolForce>
+  <SlaterSrDispForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="90.8800" B="27.2871"/>
+  </SlaterSrDispForce>
+  <SlaterDhfForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="39.1503" B="27.2871"/>
+  </SlaterDhfForce>
+  <QqTtDampingForce mScale12="0.00">
+    <Atom type="0" B="27.2871" Q="1.00000000"/>
+  </QqTtDampingForce>
+  <SlaterDampingForce mScale12="0.00">
+    <Atom type="0" B="27.2871" C6="4.000000e-03" C8="6.320331e-04" C10="1.005611e-04"/>
+  </SlaterDampingForce>
+</ForceField>

@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<ForceField>
+  <AtomTypes>
+    <Type name="0" class="C" element="C" mass="12.011"/>
+    <Type name="1" class="O" element="O" mass="15.999"/>
+    <Type name="2" class="H" element="H" mass="1.008"/>
+    <Type name="3" class="H" element="H" mass="1.008"/>
+  </AtomTypes>
+  <Residues>
+    <Residue name="FRAG_CeqO">
+      <Atom name="C0" type="0"/>
+      <Atom name="O1" type="1"/>
+      <Atom name="H2" type="2"/>
+      <Atom name="H3" type="3"/>
+      <Bond from="0" to="1"/>
+      <Bond from="0" to="2"/>
+      <Bond from="0" to="3"/>
+    </Residue>
+  </Residues>
+  <ADMPPmeForce lmax="2" mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00" pScale12="0.00" pScale13="0.00" pScale14="0.00" pScale15="0.00" pScale16="0.00" dScale12="1.00" dScale13="1.00" dScale14="1.00" dScale15="1.00" dScale16="1.00">
+    <Atom type="0" c0="0.30843856" dX="0.00000519" dY="-0.00000012" dZ="0.00040758" qXX="0.00000031" qXY="-0.00001115" qYY="0.00000398" qXZ="-0.00001325" qYZ="0.00000147" qZZ="-0.00000429" kz="1" kx="2"/>
+    <Polarize type="0" polarizabilityXX="1.243846e-03" polarizabilityYY="1.243846e-03" polarizabilityZZ="1.243846e-03" thole="0.33"/>
+    <Atom type="1" c0="-0.41150764" dX="0.00032031" dY="-0.00004798" dZ="-0.00000392" qXX="-0.00000873" qXY="-0.00001335" qYY="0.00000434" qXZ="0.00000001" qYZ="-0.00001235" qZZ="0.00000439" kz="0" kx=""/>
+    <Polarize type="1" polarizabilityXX="1.059338e-03" polarizabilityYY="1.059338e-03" polarizabilityZZ="1.059338e-03" thole="0.33"/>
+    <Atom type="2" c0="0.05152569" dX="-0.00010200" dY="0.00037340" dZ="-0.00000018" qXX="-0.00000117" qXY="-0.00000181" qYY="0.00000060" qXZ="-0.00000000" qYZ="-0.00000177" qZZ="0.00000057" kz="0" kx=""/>
+    <Polarize type="2" polarizabilityXX="1.560931e-04" polarizabilityYY="1.560931e-04" polarizabilityZZ="1.560931e-04" thole="0.33"/>
+    <Atom type="3" c0="0.05120026" dX="-0.00021123" dY="-0.00032671" dZ="0.00000506" qXX="-0.00000116" qXY="-0.00000179" qYY="0.00000056" qXZ="0.00000000" qYZ="-0.00000177" qZZ="0.00000060" kz="0" kx=""/>
+    <Polarize type="3" polarizabilityXX="1.561995e-04" polarizabilityYY="1.561995e-04" polarizabilityZZ="1.561995e-04" thole="0.33"/>
+  </ADMPPmeForce>
+  <ADMPDispPmeForce mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="1.00">
+    <Atom type="0" C6="1.314523e-03" C8="8.403102e-05" C10="6.730161e-06"/>
+    <Atom type="1" C6="1.576223e-03" C8="1.842103e-04" C10="2.073098e-05"/>
+    <Atom type="2" C6="2.053373e-05" C8="4.179802e-07" C10="1.174313e-08"/>
+    <Atom type="3" C6="2.056172e-05" C8="4.187400e-07" C10="1.176982e-08"/>
+  </ADMPDispPmeForce>
+  <SlaterExForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="1.0000" B="39.4282"/>
+    <Atom type="1" A="1.0000" B="33.6969"/>
+    <Atom type="2" A="1.0000" B="64.9039"/>
+    <Atom type="3" A="1.0000" B="64.8892"/>
+  </SlaterExForce>
+  <SlaterSrEsForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="2.0000" B="39.4282" Q="0.30843856"/>
+    <Atom type="1" A="2.0000" B="33.6969" Q="-0.41150764"/>
+    <Atom type="2" A="2.0000" B="64.9039" Q="0.05152569"/>
+    <Atom type="3" A="2.0000" B="64.8892" Q="0.05120026"/>
+  </SlaterSrEsForce>
+  <SlaterSrPolForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="3.0000" B="39.4282"/>
+    <Atom type="1" A="3.0000" B="33.6969"/>
+    <Atom type="2" A="3.0000" B="64.9039"/>
+    <Atom type="3" A="3.0000" B="64.8892"/>
+  </SlaterSrPolForce>
+  <SlaterSrDispForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="4.0000" B="39.4282"/>
+    <Atom type="1" A="4.0000" B="33.6969"/>
+    <Atom type="2" A="4.0000" B="64.9039"/>
+    <Atom type="3" A="4.0000" B="64.8892"/>
+  </SlaterSrDispForce>
+  <SlaterDhfForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="5.0000" B="39.4282"/>
+    <Atom type="1" A="5.0000" B="33.6969"/>
+    <Atom type="2" A="5.0000" B="64.9039"/>
+    <Atom type="3" A="5.0000" B="64.8892"/>
+  </SlaterDhfForce>
+  <QqTtDampingForce mScale12="0.00">
+    <Atom type="0" B="39.4282" Q="0.30843856"/>
+    <Atom type="1" B="33.6969" Q="-0.41150764"/>
+    <Atom type="2" B="64.9039" Q="0.05152569"/>
+    <Atom type="3" B="64.8892" Q="0.05120026"/>
+  </QqTtDampingForce>
+  <SlaterDampingForce mScale12="0.00">
+    <Atom type="0" B="39.4282" C6="1.314523e-03" C8="8.403102e-05" C10="6.730161e-06"/>
+    <Atom type="1" B="33.6969" C6="1.576223e-03" C8="1.842103e-04" C10="2.073098e-05"/>
+    <Atom type="2" B="64.9039" C6="2.053373e-05" C8="4.179802e-07" C10="1.174313e-08"/>
+    <Atom type="3" B="64.8892" C6="2.056172e-05" C8="4.187400e-07" C10="1.176982e-08"/>
+  </SlaterDampingForce>
+</ForceField>

@@ -1,0 +1,56 @@
+{
+  "val_molecules": 19,
+  "val_names": [
+    "Phos_888",
+    "Est_344",
+    "BOB",
+    "Phos_762",
+    "Phos_884",
+    "CCarb_958",
+    "FRAG_CO",
+    "CCarb_986",
+    "Lact_1063",
+    "FRAG_CC_F_F",
+    "CCarb_1029",
+    "Sulf_480",
+    "EP",
+    "Phos_826",
+    "Phos_848",
+    "CCarb_999",
+    "Phos_777",
+    "Est_312",
+    "Phos_554"
+  ],
+  "metrics": {
+    "charge": {
+      "rmse": 0.03558035678690097,
+      "mae": 0.025459889022003555
+    },
+    "dipole_local": {
+      "rmse": 0.00287225147613675,
+      "mae": 0.0018741389870320332
+    },
+    "quadrupole_local": {
+      "rmse": 0.0019184129924007022,
+      "mae": 0.0010516147476971566
+    },
+    "polarizability": {
+      "rmse": 3.3021081398022384e-05,
+      "mae": 2.167595097857129e-05
+    },
+    "C6": {
+      "rmse": 0.0001220721677892504,
+      "mae": 6.548961882694639e-05
+    },
+    "C8": {
+      "rmse": 1.1009107048706285e-05,
+      "mae": 5.656066078013708e-06
+    },
+    "C10": {
+      "rmse": 1.2193508002483208e-06,
+      "mae": 6.309480343496488e-07
+    }
+  },
+  "loss_plot": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/retrain_diagnostics_v5/loss_curve.png",
+  "parity_plot": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/retrain_diagnostics_v5/parity_grid.png"
+}

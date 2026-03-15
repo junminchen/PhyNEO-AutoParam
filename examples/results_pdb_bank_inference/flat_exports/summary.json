@@ -1,0 +1,1388 @@
+{
+  "model_count": 37,
+  "production_count": 193,
+  "model": [
+    {
+      "name": "BF4",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/BF4.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/BF4.pdb",
+      "charge": -1.0
+    },
+    {
+      "name": "BOB",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/BOB.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/BOB.pdb",
+      "charge": -1.0
+    },
+    {
+      "name": "CN1",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/CN1.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/CN1.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "CN2",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/CN2.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/CN2.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "CN3",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/CN3.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/CN3.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "CN4",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/CN4.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/CN4.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "CN5",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/CN5.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/CN5.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "CN6",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/CN6.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/CN6.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "CN7",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/CN7.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/CN7.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "DEC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/DEC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/DEC.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "DFEA",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/DFEA.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/DFEA.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "DFEC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/DFEC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/DFEC.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "DFOB",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/DFOB.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/DFOB.pdb",
+      "charge": -1.0
+    },
+    {
+      "name": "DFP",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/DFP.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/DFP.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "DMC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/DMC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/DMC.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "DME",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/DME.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/DME.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "DOL",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/DOL.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/DOL.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "EC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/EC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/EC.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "EMC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/EMC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/EMC.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "EP",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/EP.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/EP.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "FEC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/FEC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/FEC.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "FEMC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/FEMC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/FEMC.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "FSI",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/FSI.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/FSI.pdb",
+      "charge": -1.0
+    },
+    {
+      "name": "G2",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/G2.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/G2.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "G3",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/G3.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/G3.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "GBL",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/GBL.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/GBL.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "HFDEC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/HFDEC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/HFDEC.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "Li",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/Li.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/Li.pdb",
+      "charge": 1.0
+    },
+    {
+      "name": "NO3",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/NO3.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/NO3.pdb",
+      "charge": -1.0
+    },
+    {
+      "name": "Na",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/Na.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/Na.pdb",
+      "charge": 1.0
+    },
+    {
+      "name": "PC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/PC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/PC.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "PEO",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/PEO.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/PEO.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "PF6",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/PF6.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/PF6.pdb",
+      "charge": -1.0
+    },
+    {
+      "name": "PP",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/PP.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/PP.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "PS",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/PS.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/PS.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "SL",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/SL.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/SL.pdb",
+      "charge": 0.0
+    },
+    {
+      "name": "TFSI",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_xml/TFSI.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/model_pdb/TFSI.pdb",
+      "charge": -1.0
+    }
+  ],
+  "production": [
+    {
+      "name": "ADN",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/ADN.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/ADN.pdb",
+      "charge": 0
+    },
+    {
+      "name": "BF4",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/BF4.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/BF4.pdb",
+      "charge": -1
+    },
+    {
+      "name": "BOB",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/BOB.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/BOB.pdb",
+      "charge": -1
+    },
+    {
+      "name": "CCarb_1029",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_1029.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_1029.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_1036",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_1036.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_1036.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_1037",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_1037.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_1037.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_1041",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_1041.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_1041.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_1043",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_1043.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_1043.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_906",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_906.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_906.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_927",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_927.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_927.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_928",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_928.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_928.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_940",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_940.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_940.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_958",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_958.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_958.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_986",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_986.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_986.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_996",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_996.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_996.pdb",
+      "charge": 0
+    },
+    {
+      "name": "CCarb_999",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/CCarb_999.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/CCarb_999.pdb",
+      "charge": 0
+    },
+    {
+      "name": "DBC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DBC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DBC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "DEC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DEC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DEC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "DEPC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DEPC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DEPC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "DFEA",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DFEA.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DFEA.pdb",
+      "charge": 0
+    },
+    {
+      "name": "DFEC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DFEC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DFEC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "DFOB",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DFOB.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DFOB.pdb",
+      "charge": -1
+    },
+    {
+      "name": "DFP",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DFP.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DFP.pdb",
+      "charge": -1
+    },
+    {
+      "name": "DMC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DMC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DMC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "DME",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DME.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DME.pdb",
+      "charge": 0
+    },
+    {
+      "name": "DOL",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DOL.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DOL.pdb",
+      "charge": 0
+    },
+    {
+      "name": "DTD",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/DTD.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/DTD.pdb",
+      "charge": 0
+    },
+    {
+      "name": "EC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/EC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/EC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "EGDMC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/EGDMC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/EGDMC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "EMC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/EMC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/EMC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "EP",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/EP.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/EP.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_258",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_258.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_258.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_264",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_264.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_264.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_267",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_267.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_267.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_277",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_277.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_277.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_311",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_311.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_311.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_312",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_312.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_312.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_315",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_315.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_315.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_319",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_319.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_319.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_329",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_329.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_329.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_331",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_331.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_331.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_333",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_333.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_333.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_344",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_344.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_344.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_358",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_358.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_358.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_373",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_373.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_373.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_376",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_376.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_376.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_379",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_379.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_379.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_387",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_387.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_387.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_390",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_390.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_390.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_397",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_397.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_397.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_398",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_398.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_398.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_400",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_400.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_400.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Est_407",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Est_407.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Est_407.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FEC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FEC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FEC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FEMC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FEMC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FEMC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_C",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_C.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_C.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_C1CCOC1",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_C1CCOC1.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_C1CCOC1.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_C1CO1",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_C1CO1.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_C1CO1.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCCC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCCC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCCC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCCO",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCCO.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCCO.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCCeqO",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCCeqO.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCCeqO.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCCtriN",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCCtriN.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCCtriN.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCF",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCF.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCF.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCO",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCO.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCO.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCOCC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCOCC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCOCC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCOC_eqO_C",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCOC_eqO_C.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCOC_eqO_C.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CC_C_C",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CC_C_C.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CC_C_C.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CC_F_F",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CC_F_F.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CC_F_F.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CC_F__F_F",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CC_F__F_F.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CC_F__F_F.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CC_O_C",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CC_O_C.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CC_O_C.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CC_eqO_C",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CC_eqO_C.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CC_eqO_C.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CC_eqO_O",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CC_eqO_O.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CC_eqO_O.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CC_eqO_OC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CC_eqO_OC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CC_eqO_OC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCeqO",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCeqO.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCeqO.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CCtriN",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CCtriN.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CCtriN.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CF",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CF.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CF.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CO",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CO.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CO.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_COC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_COC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_COC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_COCC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_COCC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_COCC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_COCeqO",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_COCeqO.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_COCeqO.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_COP_eqO__OC_OC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_COP_eqO__OC_OC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_COP_eqO__OC_OC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CP_eqO__O_O",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CP_eqO__O_O.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CP_eqO__O_O.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CS_eqO__eqO_C",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CS_eqO__eqO_C.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CS_eqO__eqO_C.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_C_F_F",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_C_F_F.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_C_F_F.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_C_F__F_F",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_C_F__F_F.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_C_F__F_F.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CeqO",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CeqO.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CeqO.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_CtriN",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_CtriN.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_CtriN.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FRAG_FC1COC_eqO_O1",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FRAG_FC1COC_eqO_O1.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FRAG_FC1COC_eqO_O1.pdb",
+      "charge": 0
+    },
+    {
+      "name": "FSI",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/FSI.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/FSI.pdb",
+      "charge": -1
+    },
+    {
+      "name": "G3",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/G3.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/G3.pdb",
+      "charge": 0
+    },
+    {
+      "name": "GBL",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/GBL.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/GBL.pdb",
+      "charge": 0
+    },
+    {
+      "name": "HFDEC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/HFDEC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/HFDEC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_100",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_100.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_100.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_14",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_14.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_14.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_17",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_17.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_17.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_28",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_28.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_28.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_31",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_31.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_31.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_33",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_33.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_33.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_37",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_37.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_37.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_38",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_38.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_38.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_40",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_40.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_40.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_55",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_55.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_55.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_61",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_61.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_61.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_72",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_72.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_72.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_87",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_87.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_87.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_88",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_88.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_88.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_91",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_91.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_91.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LCarb_93",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LCarb_93.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LCarb_93.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LEth_132",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LEth_132.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LEth_132.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LEth_143",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LEth_143.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LEth_143.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LEth_152",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LEth_152.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LEth_152.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LEth_160",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LEth_160.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LEth_160.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LEth_166",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LEth_166.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LEth_166.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LEth_176",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LEth_176.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LEth_176.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LEth_186",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LEth_186.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LEth_186.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LEth_192",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LEth_192.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LEth_192.pdb",
+      "charge": 0
+    },
+    {
+      "name": "LEth_197",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/LEth_197.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/LEth_197.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Lact_1047",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Lact_1047.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Lact_1047.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Lact_1063",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Lact_1063.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Lact_1063.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Li",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Li.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Li.pdb",
+      "charge": 1
+    },
+    {
+      "name": "NO3",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/NO3.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/NO3.pdb",
+      "charge": -1
+    },
+    {
+      "name": "Na",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Na.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Na.pdb",
+      "charge": 1
+    },
+    {
+      "name": "PC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/PC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/PC.pdb",
+      "charge": 0
+    },
+    {
+      "name": "PEO",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/PEO.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/PEO.pdb",
+      "charge": 0
+    },
+    {
+      "name": "PF6",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/PF6.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/PF6.pdb",
+      "charge": -1
+    },
+    {
+      "name": "PP",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/PP.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/PP.pdb",
+      "charge": 0
+    },
+    {
+      "name": "PS",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/PS.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/PS.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_541",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_541.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_541.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_545",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_545.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_545.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_554",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_554.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_554.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_557",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_557.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_557.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_560",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_560.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_560.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_567",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_567.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_567.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_581",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_581.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_581.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_622",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_622.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_622.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_632",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_632.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_632.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_659",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_659.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_659.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_660",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_660.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_660.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_663",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_663.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_663.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_683",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_683.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_683.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_685",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_685.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_685.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_698",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_698.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_698.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_706",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_706.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_706.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_707",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_707.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_707.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_725",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_725.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_725.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_733",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_733.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_733.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_735",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_735.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_735.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_741",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_741.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_741.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_749",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_749.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_749.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_753",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_753.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_753.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_762",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_762.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_762.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_766",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_766.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_766.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_770",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_770.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_770.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_777",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_777.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_777.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_780",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_780.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_780.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_795",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_795.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_795.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_804",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_804.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_804.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_819",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_819.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_819.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_822",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_822.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_822.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_826",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_826.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_826.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_830",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_830.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_830.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_838",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_838.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_838.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_840",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_840.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_840.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_848",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_848.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_848.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_861",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_861.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_861.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_884",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_884.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_884.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Phos_888",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Phos_888.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Phos_888.pdb",
+      "charge": 0
+    },
+    {
+      "name": "SL",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/SL.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/SL.pdb",
+      "charge": 0
+    },
+    {
+      "name": "SN",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/SN.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/SN.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Spec_1064",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Spec_1064.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Spec_1064.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_426",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_426.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_426.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_428",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_428.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_428.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_448",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_448.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_448.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_456",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_456.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_456.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_457",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_457.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_457.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_458",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_458.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_458.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_460",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_460.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_460.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_468",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_468.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_468.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_473",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_473.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_473.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_480",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_480.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_480.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_481",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_481.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_481.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_490",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_490.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_490.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_492",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_492.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_492.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_515",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_515.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_515.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_517",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_517.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_517.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_520",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_520.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_520.pdb",
+      "charge": 0
+    },
+    {
+      "name": "Sulf_528",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/Sulf_528.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/Sulf_528.pdb",
+      "charge": 0
+    },
+    {
+      "name": "TEP",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/TEP.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/TEP.pdb",
+      "charge": 0
+    },
+    {
+      "name": "TFSI",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/TFSI.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/TFSI.pdb",
+      "charge": -1
+    },
+    {
+      "name": "TMP",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/TMP.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/TMP.pdb",
+      "charge": 0
+    },
+    {
+      "name": "VC",
+      "xml": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_xml/VC.xml",
+      "pdb": "/Users/jeremychen/Desktop/Project/repo/PhyNEO-AutoParam/examples/results_pdb_bank_inference/flat_exports/production_pdb/VC.pdb",
+      "charge": 0
+    }
+  ]
+}

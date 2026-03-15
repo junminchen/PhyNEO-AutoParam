@@ -1,0 +1,234 @@
+<?xml version="1.0" ?>
+<ForceField>
+  <AtomTypes>
+    <Type name="0" class="C" element="C" mass="12.011"/>
+    <Type name="1" class="C" element="C" mass="12.011"/>
+    <Type name="2" class="O" element="O" mass="15.999"/>
+    <Type name="3" class="C" element="C" mass="12.011"/>
+    <Type name="4" class="O" element="O" mass="15.999"/>
+    <Type name="5" class="O" element="O" mass="15.999"/>
+    <Type name="6" class="C" element="C" mass="12.011"/>
+    <Type name="7" class="C" element="C" mass="12.011"/>
+    <Type name="8" class="F" element="F" mass="18.998"/>
+    <Type name="9" class="H" element="H" mass="1.008"/>
+    <Type name="10" class="H" element="H" mass="1.008"/>
+    <Type name="11" class="H" element="H" mass="1.008"/>
+    <Type name="12" class="H" element="H" mass="1.008"/>
+    <Type name="13" class="H" element="H" mass="1.008"/>
+    <Type name="14" class="H" element="H" mass="1.008"/>
+    <Type name="15" class="H" element="H" mass="1.008"/>
+  </AtomTypes>
+  <Residues>
+    <Residue name="LCarb_87">
+      <Atom name="C0" type="0"/>
+      <Atom name="C1" type="1"/>
+      <Atom name="O2" type="2"/>
+      <Atom name="C3" type="3"/>
+      <Atom name="O4" type="4"/>
+      <Atom name="O5" type="5"/>
+      <Atom name="C6" type="6"/>
+      <Atom name="C7" type="7"/>
+      <Atom name="F8" type="8"/>
+      <Atom name="H9" type="9"/>
+      <Atom name="H10" type="10"/>
+      <Atom name="H11" type="11"/>
+      <Atom name="H12" type="12"/>
+      <Atom name="H13" type="13"/>
+      <Atom name="H14" type="14"/>
+      <Atom name="H15" type="15"/>
+      <Bond from="0" to="1"/>
+      <Bond from="0" to="9"/>
+      <Bond from="0" to="10"/>
+      <Bond from="1" to="2"/>
+      <Bond from="1" to="11"/>
+      <Bond from="2" to="3"/>
+      <Bond from="3" to="4"/>
+      <Bond from="3" to="5"/>
+      <Bond from="5" to="6"/>
+      <Bond from="6" to="7"/>
+      <Bond from="6" to="12"/>
+      <Bond from="6" to="13"/>
+      <Bond from="7" to="8"/>
+      <Bond from="7" to="14"/>
+      <Bond from="7" to="15"/>
+    </Residue>
+  </Residues>
+  <ADMPPmeForce lmax="2" mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00" pScale12="0.00" pScale13="0.00" pScale14="0.00" pScale15="0.00" pScale16="0.00" dScale12="1.00" dScale13="1.00" dScale14="1.00" dScale15="1.00" dScale16="1.00">
+    <Atom type="0" c0="-0.52604448" dX="-0.00008936" dY="0.00000613" dZ="-0.00040258" qXX="0.00001214" qXY="0.00000176" qYY="-0.00000685" qXZ="0.00001801" qYZ="0.00001411" qZZ="-0.00000529" kz="1" kx="9"/>
+    <Polarize type="0" polarizabilityXX="1.881238e-03" polarizabilityYY="1.881238e-03" polarizabilityZZ="1.881238e-03" thole="0.33"/>
+    <Atom type="1" c0="0.16271918" dX="0.00082769" dY="0.00000633" dZ="-0.00059251" qXX="0.00000950" qXY="-0.00000144" qYY="-0.00000544" qXZ="0.00001398" qYZ="-0.00001116" qZZ="-0.00000405" kz="0" kx="2"/>
+    <Polarize type="1" polarizabilityXX="1.401869e-03" polarizabilityYY="1.401869e-03" polarizabilityZZ="1.401869e-03" thole="0.33"/>
+    <Atom type="2" c0="-0.40222934" dX="-0.00005883" dY="0.00000572" dZ="0.00048918" qXX="0.00001500" qXY="-0.00000895" qYY="-0.00000557" qXZ="-0.00000907" qYZ="-0.00000590" qZZ="-0.00000943" kz="1" kx="3"/>
+    <Polarize type="2" polarizabilityXX="1.012654e-03" polarizabilityYY="1.012654e-03" polarizabilityZZ="1.012654e-03" thole="0.33"/>
+    <Atom type="3" c0="1.01550095" dX="-0.00015490" dY="0.00001093" dZ="0.00019087" qXX="-0.00000702" qXY="-0.00000683" qYY="-0.00000381" qXZ="-0.00000574" qYZ="0.00000268" qZZ="0.00001083" kz="2" kx="4"/>
+    <Polarize type="3" polarizabilityXX="8.713432e-04" polarizabilityYY="8.713432e-04" polarizabilityZZ="8.713432e-04" thole="0.33"/>
+    <Atom type="4" c0="-0.63457196" dX="0.00026544" dY="0.00076850" dZ="-0.00035358" qXX="-0.00000922" qXY="-0.00001379" qYY="0.00000460" qXZ="0.00000011" qYZ="-0.00001358" qZZ="0.00000463" kz="3" kx=""/>
+    <Polarize type="4" polarizabilityXX="1.140909e-03" polarizabilityYY="1.140909e-03" polarizabilityZZ="1.140909e-03" thole="0.33"/>
+    <Atom type="5" c0="-0.41311250" dX="0.00031629" dY="0.00004212" dZ="-0.00048318" qXX="0.00001790" qXY="-0.00000733" qYY="-0.00000547" qXZ="-0.00000080" qYZ="-0.00000841" qZZ="-0.00001242" kz="3" kx="6"/>
+    <Polarize type="5" polarizabilityXX="1.026786e-03" polarizabilityYY="1.026786e-03" polarizabilityZZ="1.026786e-03" thole="0.33"/>
+    <Atom type="6" c0="-0.04305671" dX="0.00020048" dY="-0.00003403" dZ="0.00084381" qXX="-0.00000768" qXY="-0.00001161" qYY="-0.00000654" qXZ="0.00001175" qYZ="-0.00000309" qZZ="0.00001422" kz="5" kx="7"/>
+    <Polarize type="6" polarizabilityXX="1.497788e-03" polarizabilityYY="1.497788e-03" polarizabilityZZ="1.497788e-03" thole="0.33"/>
+    <Atom type="7" c0="0.04015689" dX="0.00085242" dY="0.00008220" dZ="-0.00012024" qXX="-0.00000098" qXY="0.00001191" qYY="0.00001329" qXZ="-0.00000990" qYZ="0.00000039" qZZ="-0.00001231" kz="6" kx="8"/>
+    <Polarize type="7" polarizabilityXX="1.435319e-03" polarizabilityYY="1.435319e-03" polarizabilityZZ="1.435319e-03" thole="0.33"/>
+    <Atom type="8" c0="-0.22248355" dX="0.00010022" dY="-0.00001247" dZ="-0.00023157" qXX="-0.00000738" qXY="-0.00001115" qYY="0.00000370" qXZ="0.00000000" qYZ="-0.00001086" qZZ="0.00000367" kz="7" kx=""/>
+    <Polarize type="8" polarizabilityXX="8.340883e-04" polarizabilityYY="8.340883e-04" polarizabilityZZ="8.340883e-04" thole="0.33"/>
+    <Atom type="9" c0="0.20087741" dX="0.00024744" dY="-0.00001665" dZ="-0.00001051" qXX="-0.00000089" qXY="-0.00000131" qYY="0.00000045" qXZ="-0.00000002" qYZ="-0.00000134" qZZ="0.00000044" kz="0" kx=""/>
+    <Polarize type="9" polarizabilityXX="1.097446e-04" polarizabilityYY="1.097446e-04" polarizabilityZZ="1.097446e-04" thole="0.33"/>
+    <Atom type="10" c0="0.22730019" dX="-0.00012438" dY="0.00021953" dZ="-0.00008119" qXX="-0.00000083" qXY="-0.00000125" qYY="0.00000042" qXZ="-0.00000001" qYZ="-0.00000126" qZZ="0.00000041" kz="0" kx=""/>
+    <Polarize type="10" polarizabilityXX="1.016439e-04" polarizabilityYY="1.016439e-04" polarizabilityZZ="1.016439e-04" thole="0.33"/>
+    <Atom type="11" c0="0.13471662" dX="0.00015340" dY="-0.00031687" dZ="0.00012145" qXX="-0.00000094" qXY="-0.00000148" qYY="0.00000048" qXZ="-0.00000002" qYZ="-0.00000152" qZZ="0.00000046" kz="1" kx=""/>
+    <Polarize type="11" polarizabilityXX="1.223788e-04" polarizabilityYY="1.223788e-04" polarizabilityZZ="1.223788e-04" thole="0.33"/>
+    <Atom type="12" c0="0.11939523" dX="0.00000687" dY="0.00001301" dZ="-0.00032726" qXX="-0.00000101" qXY="-0.00000154" qYY="0.00000049" qXZ="0.00000000" qYZ="-0.00000158" qZZ="0.00000052" kz="6" kx=""/>
+    <Polarize type="12" polarizabilityXX="1.318446e-04" polarizabilityYY="1.318446e-04" polarizabilityZZ="1.318446e-04" thole="0.33"/>
+    <Atom type="13" c0="0.13285435" dX="0.00005318" dY="0.00025259" dZ="0.00020423" qXX="-0.00000098" qXY="-0.00000151" qYY="0.00000047" qXZ="-0.00000001" qYZ="-0.00000153" qZZ="0.00000051" kz="6" kx=""/>
+    <Polarize type="13" polarizabilityXX="1.275461e-04" polarizabilityYY="1.275461e-04" polarizabilityZZ="1.275461e-04" thole="0.33"/>
+    <Atom type="14" c0="0.09935721" dX="-0.00025326" dY="0.00021225" dZ="-0.00007821" qXX="-0.00000107" qXY="-0.00000161" qYY="0.00000055" qXZ="0.00000000" qYZ="-0.00000155" qZZ="0.00000052" kz="7" kx=""/>
+    <Polarize type="14" polarizabilityXX="1.350303e-04" polarizabilityYY="1.350303e-04" polarizabilityZZ="1.350303e-04" thole="0.33"/>
+    <Atom type="15" c0="0.10618391" dX="0.00001653" dY="-0.00033427" dZ="-0.00005436" qXX="-0.00000104" qXY="-0.00000160" qYY="0.00000053" qXZ="-0.00000001" qYZ="-0.00000153" qZZ="0.00000051" kz="7" kx=""/>
+    <Polarize type="15" polarizabilityXX="1.329798e-04" polarizabilityYY="1.329798e-04" polarizabilityZZ="1.329798e-04" thole="0.33"/>
+  </ADMPPmeForce>
+  <ADMPDispPmeForce mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="1.00">
+    <Atom type="0" C6="3.006926e-03" C8="2.532672e-04" C10="2.672696e-05"/>
+    <Atom type="1" C6="1.669744e-03" C8="1.155975e-04" C10="1.002678e-05"/>
+    <Atom type="2" C6="1.440361e-03" C8="1.633499e-04" C10="1.783922e-05"/>
+    <Atom type="3" C6="6.450804e-04" C8="3.252623e-05" C10="2.054793e-06"/>
+    <Atom type="4" C6="1.828316e-03" C8="2.245047e-04" C10="2.654661e-05"/>
+    <Atom type="5" C6="1.480843e-03" C8="1.694997e-04" C10="1.868265e-05"/>
+    <Atom type="6" C6="1.906059e-03" C8="1.379104e-04" C10="1.250179e-05"/>
+    <Atom type="7" C6="1.750379e-03" C8="1.231000e-04" C10="1.084672e-05"/>
+    <Atom type="8" C6="1.201690e-03" C8="1.472893e-04" C10="1.674840e-05"/>
+    <Atom type="9" C6="1.015002e-05" C8="1.633633e-07" C10="3.628961e-09"/>
+    <Atom type="10" C6="8.706879e-06" C8="1.331523e-07" C10="2.810444e-09"/>
+    <Atom type="11" C6="1.262155e-05" C8="2.184484e-07" C10="5.218253e-09"/>
+    <Atom type="12" C6="1.464958e-05" C8="2.664601e-07" C10="6.689279e-09"/>
+    <Atom type="13" C6="1.370991e-05" C8="2.439184e-07" C10="5.989559e-09"/>
+    <Atom type="14" C6="1.536606e-05" C8="2.839762e-07" C10="7.243384e-09"/>
+    <Atom type="15" C6="1.490294e-05" C8="2.726221e-07" C10="6.883200e-09"/>
+  </ADMPDispPmeForce>
+  <SlaterExForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="1.0000" B="34.3491"/>
+    <Atom type="1" A="1.0000" B="37.8873"/>
+    <Atom type="2" A="1.0000" B="34.2069"/>
+    <Atom type="3" A="1.0000" B="44.3949"/>
+    <Atom type="4" A="1.0000" B="32.8738"/>
+    <Atom type="5" A="1.0000" B="34.0492"/>
+    <Atom type="6" A="1.0000" B="37.0606"/>
+    <Atom type="7" A="1.0000" B="37.5907"/>
+    <Atom type="8" A="1.0000" B="33.3356"/>
+    <Atom type="9" A="1.0000" B="72.9913"/>
+    <Atom type="10" A="1.0000" B="74.8810"/>
+    <Atom type="11" A="1.0000" B="70.3877"/>
+    <Atom type="12" A="1.0000" B="68.6612"/>
+    <Atom type="13" A="1.0000" B="69.4240"/>
+    <Atom type="14" A="1.0000" B="68.1169"/>
+    <Atom type="15" A="1.0000" B="68.4652"/>
+  </SlaterExForce>
+  <SlaterSrEsForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="2.0000" B="34.3491" Q="-0.52604448"/>
+    <Atom type="1" A="2.0000" B="37.8873" Q="0.16271918"/>
+    <Atom type="2" A="2.0000" B="34.2069" Q="-0.40222934"/>
+    <Atom type="3" A="2.0000" B="44.3949" Q="1.01550095"/>
+    <Atom type="4" A="2.0000" B="32.8738" Q="-0.63457196"/>
+    <Atom type="5" A="2.0000" B="34.0492" Q="-0.41311250"/>
+    <Atom type="6" A="2.0000" B="37.0606" Q="-0.04305671"/>
+    <Atom type="7" A="2.0000" B="37.5907" Q="0.04015689"/>
+    <Atom type="8" A="2.0000" B="33.3356" Q="-0.22248355"/>
+    <Atom type="9" A="2.0000" B="72.9913" Q="0.20087741"/>
+    <Atom type="10" A="2.0000" B="74.8810" Q="0.22730019"/>
+    <Atom type="11" A="2.0000" B="70.3877" Q="0.13471662"/>
+    <Atom type="12" A="2.0000" B="68.6612" Q="0.11939523"/>
+    <Atom type="13" A="2.0000" B="69.4240" Q="0.13285435"/>
+    <Atom type="14" A="2.0000" B="68.1169" Q="0.09935721"/>
+    <Atom type="15" A="2.0000" B="68.4652" Q="0.10618391"/>
+  </SlaterSrEsForce>
+  <SlaterSrPolForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="3.0000" B="34.3491"/>
+    <Atom type="1" A="3.0000" B="37.8873"/>
+    <Atom type="2" A="3.0000" B="34.2069"/>
+    <Atom type="3" A="3.0000" B="44.3949"/>
+    <Atom type="4" A="3.0000" B="32.8738"/>
+    <Atom type="5" A="3.0000" B="34.0492"/>
+    <Atom type="6" A="3.0000" B="37.0606"/>
+    <Atom type="7" A="3.0000" B="37.5907"/>
+    <Atom type="8" A="3.0000" B="33.3356"/>
+    <Atom type="9" A="3.0000" B="72.9913"/>
+    <Atom type="10" A="3.0000" B="74.8810"/>
+    <Atom type="11" A="3.0000" B="70.3877"/>
+    <Atom type="12" A="3.0000" B="68.6612"/>
+    <Atom type="13" A="3.0000" B="69.4240"/>
+    <Atom type="14" A="3.0000" B="68.1169"/>
+    <Atom type="15" A="3.0000" B="68.4652"/>
+  </SlaterSrPolForce>
+  <SlaterSrDispForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="4.0000" B="34.3491"/>
+    <Atom type="1" A="4.0000" B="37.8873"/>
+    <Atom type="2" A="4.0000" B="34.2069"/>
+    <Atom type="3" A="4.0000" B="44.3949"/>
+    <Atom type="4" A="4.0000" B="32.8738"/>
+    <Atom type="5" A="4.0000" B="34.0492"/>
+    <Atom type="6" A="4.0000" B="37.0606"/>
+    <Atom type="7" A="4.0000" B="37.5907"/>
+    <Atom type="8" A="4.0000" B="33.3356"/>
+    <Atom type="9" A="4.0000" B="72.9913"/>
+    <Atom type="10" A="4.0000" B="74.8810"/>
+    <Atom type="11" A="4.0000" B="70.3877"/>
+    <Atom type="12" A="4.0000" B="68.6612"/>
+    <Atom type="13" A="4.0000" B="69.4240"/>
+    <Atom type="14" A="4.0000" B="68.1169"/>
+    <Atom type="15" A="4.0000" B="68.4652"/>
+  </SlaterSrDispForce>
+  <SlaterDhfForce mScale12="0.00" mScale13="0.00">
+    <Atom type="0" A="5.0000" B="34.3491"/>
+    <Atom type="1" A="5.0000" B="37.8873"/>
+    <Atom type="2" A="5.0000" B="34.2069"/>
+    <Atom type="3" A="5.0000" B="44.3949"/>
+    <Atom type="4" A="5.0000" B="32.8738"/>
+    <Atom type="5" A="5.0000" B="34.0492"/>
+    <Atom type="6" A="5.0000" B="37.0606"/>
+    <Atom type="7" A="5.0000" B="37.5907"/>
+    <Atom type="8" A="5.0000" B="33.3356"/>
+    <Atom type="9" A="5.0000" B="72.9913"/>
+    <Atom type="10" A="5.0000" B="74.8810"/>
+    <Atom type="11" A="5.0000" B="70.3877"/>
+    <Atom type="12" A="5.0000" B="68.6612"/>
+    <Atom type="13" A="5.0000" B="69.4240"/>
+    <Atom type="14" A="5.0000" B="68.1169"/>
+    <Atom type="15" A="5.0000" B="68.4652"/>
+  </SlaterDhfForce>
+  <QqTtDampingForce mScale12="0.00">
+    <Atom type="0" B="34.3491" Q="-0.52604448"/>
+    <Atom type="1" B="37.8873" Q="0.16271918"/>
+    <Atom type="2" B="34.2069" Q="-0.40222934"/>
+    <Atom type="3" B="44.3949" Q="1.01550095"/>
+    <Atom type="4" B="32.8738" Q="-0.63457196"/>
+    <Atom type="5" B="34.0492" Q="-0.41311250"/>
+    <Atom type="6" B="37.0606" Q="-0.04305671"/>
+    <Atom type="7" B="37.5907" Q="0.04015689"/>
+    <Atom type="8" B="33.3356" Q="-0.22248355"/>
+    <Atom type="9" B="72.9913" Q="0.20087741"/>
+    <Atom type="10" B="74.8810" Q="0.22730019"/>
+    <Atom type="11" B="70.3877" Q="0.13471662"/>
+    <Atom type="12" B="68.6612" Q="0.11939523"/>
+    <Atom type="13" B="69.4240" Q="0.13285435"/>
+    <Atom type="14" B="68.1169" Q="0.09935721"/>
+    <Atom type="15" B="68.4652" Q="0.10618391"/>
+  </QqTtDampingForce>
+  <SlaterDampingForce mScale12="0.00">
+    <Atom type="0" B="34.3491" C6="3.006926e-03" C8="2.532672e-04" C10="2.672696e-05"/>
+    <Atom type="1" B="37.8873" C6="1.669744e-03" C8="1.155975e-04" C10="1.002678e-05"/>
+    <Atom type="2" B="34.2069" C6="1.440361e-03" C8="1.633499e-04" C10="1.783922e-05"/>
+    <Atom type="3" B="44.3949" C6="6.450804e-04" C8="3.252623e-05" C10="2.054793e-06"/>
+    <Atom type="4" B="32.8738" C6="1.828316e-03" C8="2.245047e-04" C10="2.654661e-05"/>
+    <Atom type="5" B="34.0492" C6="1.480843e-03" C8="1.694997e-04" C10="1.868265e-05"/>
+    <Atom type="6" B="37.0606" C6="1.906059e-03" C8="1.379104e-04" C10="1.250179e-05"/>
+    <Atom type="7" B="37.5907" C6="1.750379e-03" C8="1.231000e-04" C10="1.084672e-05"/>
+    <Atom type="8" B="33.3356" C6="1.201690e-03" C8="1.472893e-04" C10="1.674840e-05"/>
+    <Atom type="9" B="72.9913" C6="1.015002e-05" C8="1.633633e-07" C10="3.628961e-09"/>
+    <Atom type="10" B="74.8810" C6="8.706879e-06" C8="1.331523e-07" C10="2.810444e-09"/>
+    <Atom type="11" B="70.3877" C6="1.262155e-05" C8="2.184484e-07" C10="5.218253e-09"/>
+    <Atom type="12" B="68.6612" C6="1.464958e-05" C8="2.664601e-07" C10="6.689279e-09"/>
+    <Atom type="13" B="69.4240" C6="1.370991e-05" C8="2.439184e-07" C10="5.989559e-09"/>
+    <Atom type="14" B="68.1169" C6="1.536606e-05" C8="2.839762e-07" C10="7.243384e-09"/>
+    <Atom type="15" B="68.4652" C6="1.490294e-05" C8="2.726221e-07" C10="6.883200e-09"/>
+  </SlaterDampingForce>
+</ForceField>
