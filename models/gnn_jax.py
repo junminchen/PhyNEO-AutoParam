@@ -109,22 +109,50 @@ class ChargeVolume(nn.Module):
     """
     @nn.compact
     def __call__(self, latent, atomic_numbers, total_charge=0.0):
-        # Predict: [chi_delta, eta_raw, kappa_raw]
-        res = MLP([64, 32, 3])(latent)
+        # Predict only the QEq-related terms. Polarizability is handled by a dedicated head.
+        res = MLP([64, 32, 2])(latent)
         
         # 1. chi = chi_prior + chi_delta
         # Vectorized lookup of priors using JAX array indexing
         priors = _CHI_PRIORS_ARRAY[atomic_numbers.astype(jnp.int32)]
         chi = priors + res[:, 0]
         
-        # 2. eta and kappa (positive only)
+        # 2. eta (positive only)
         eta = jnp.exp(res[:, 1]) 
-        kappa = nn.sigmoid(res[:, 2]) * 2.0
         
         # Solve for charges using the physical QEq layer
         q = QEqSolver()(chi, eta, total_charge)
         
-        return q, kappa, chi, eta
+        return q, chi, eta
+
+
+class PolarizabilityHead(nn.Module):
+    @nn.compact
+    def __call__(self, node_latent):
+        raw = MLP([64, 32, 1])(node_latent)
+        return nn.softplus(raw[:, 0]) * 2.0
+
+
+class DipoleHead(nn.Module):
+    @nn.compact
+    def __call__(self, node_latent):
+        # Keep dipole amplitudes in the same ballpark as the global-frame labels.
+        return MLP([64, 32, 3])(node_latent)
+
+
+class QuadrupoleHead(nn.Module):
+    @nn.compact
+    def __call__(self, node_latent):
+        return MLP([64, 32, 6])(node_latent) * 0.01
+
+
+class DispersionHead(nn.Module):
+    @nn.compact
+    def __call__(self, node_latent):
+        raw = MLP([64, 32, 3])(node_latent)
+        positive = nn.softplus(raw)
+        scales = jnp.array([1e-3, 1e-4, 1e-5], dtype=positive.dtype)
+        return positive * scales
 
 class Delta3DBlock(nn.Module):
     """
@@ -152,21 +180,12 @@ class FFBlock(nn.Module):
     @nn.compact
     def __call__(self, node_latent, edge_latent, atomic_numbers, total_charge=0.0, coords=None):
         # --- PHASE 1: Base Parameters (Non-bonded) ---
-        # 1. Physical Charge & Volume via QEq (Pass atomic_numbers for priors)
-        q_base, kappa_base, chi, eta = ChargeVolume()(node_latent, atomic_numbers, total_charge)
-
-
-        # 2. Multipoles (Dipole: 3, Quadrupole: 6 independent components)
-        # Total 9 components for high-order electrostatics
-        multipoles = MLP([64, 32, 9])(node_latent)
-        dipole = multipoles[:, 0:3] * 0.1 # Small initial scale
-        quadrupole = multipoles[:, 3:9] * 0.01
-
-        # 3. Dispersion Scaling (C_n proportional to kappa^m)
-        # Ref: C6 ~ kappa^2, C8 ~ kappa^2.66, C10 ~ kappa^3.33
-        c6 = (kappa_base ** 2.0) * 1e-3
-        c8 = (kappa_base ** 2.66) * 1e-4
-        c10 = (kappa_base ** 3.33) * 1e-5
+        q_base, chi, eta = ChargeVolume()(node_latent, atomic_numbers, total_charge)
+        kappa_base = PolarizabilityHead()(node_latent)
+        dipole = DipoleHead()(node_latent)
+        quadrupole = QuadrupoleHead()(node_latent)
+        dispersion = DispersionHead()(node_latent)
+        c6, c8, c10 = dispersion[:, 0], dispersion[:, 1], dispersion[:, 2]
 
         # 4. SAPT & Short-range B
         sapt_params = MLP([64, 32, 6])(node_latent)
@@ -230,6 +249,4 @@ class PhyNEO_GNN_V2(nn.Module):
         # Pass the first column of original nodes as atomic numbers for reference
         params = FFBlock()(current_graph.nodes, current_graph.edges, graph.nodes[:, 0], total_charge, coords)
         return params
-
-
 

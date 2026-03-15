@@ -1,18 +1,23 @@
 import jax
 import jax.numpy as jnp
 import optax
-import flax.linen as nn
 from models.gnn_jax import PhyNEO_GNN_V2
 from core.molecule import Molecule
-import jraph
 import json
 import os
 import random
-from typing import Dict, Any, List
+from typing import Any
 from functools import partial
 
 from rdkit import RDLogger
 RDLogger.DisableLog('rdApp.*') # Silence RDKit warnings
+
+_BOHR3_TO_NM3 = 0.00014818471148644427
+_HARTREE_TO_KJMOL = 2625.499638
+_BOHR_TO_NM = 0.052917721092
+_C6_AU_TO_DMFF = _HARTREE_TO_KJMOL * (_BOHR_TO_NM ** 6)
+_C8_AU_TO_DMFF = _HARTREE_TO_KJMOL * (_BOHR_TO_NM ** 8)
+_C10_AU_TO_DMFF = _HARTREE_TO_KJMOL * (_BOHR_TO_NM ** 10)
 
 def load_master_dataset(path: str):
     with open(path, 'r') as f:
@@ -55,9 +60,14 @@ def load_master_dataset(path: str):
 
             processed.append({
                 "name": entry['name'],
+                "smiles": entry['smiles'],
                 "graph": graph,
                 "q_ref": q_ref,
                 "k_ref": k_ref,
+                "alpha_ref": jnp.array([a.get('alpha', 0.0) for a in entry['atoms']]) * _BOHR3_TO_NM3,
+                "c6_ref": jnp.array([a.get('c6', 0.0) for a in entry['atoms']]) * _C6_AU_TO_DMFF,
+                "c8_ref": jnp.array([a.get('c8', 0.0) for a in entry['atoms']]) * _C8_AU_TO_DMFF,
+                "c10_ref": jnp.array([a.get('c10', 0.0) for a in entry['atoms']]) * _C10_AU_TO_DMFF,
                 "d_ref": d_ref,
                 "qt_ref": qt_ref,
                 "total_q": float(entry['total_charge']), # Strict float
@@ -69,21 +79,63 @@ def load_master_dataset(path: str):
     print(f"--- Finished loading {len(processed)} molecules ---")
     return processed
 
-from functools import partial
-
 class JointTrainer:
-    def __init__(self, learning_rate=1e-3):
+    def __init__(self, learning_rate=1e-3, target_scales=None, loss_weights=None):
         self.model = PhyNEO_GNN_V2(hidden_dim=128, num_layers=6)
         self.optimizer = optax.adam(learning_rate)
+        self.target_scales = {
+            "q": 1.0,
+            "alpha": 1.0,
+            "dipole": 1.0,
+            "quadrupole": 1.0,
+            "c6": 1.0,
+            "c8": 1.0,
+            "c10": 1.0,
+        }
+        if target_scales is not None:
+            self.target_scales.update(target_scales)
+        self.loss_weights = {
+            "q": 1.0,
+            "alpha": 1.0,
+            "dipole": 1.0,
+            "quadrupole": 1.0,
+            "c6": 1.0,
+            "c8": 1.0,
+            "c10": 1.0,
+        }
+        if loss_weights is not None:
+            self.loss_weights.update(loss_weights)
+
+    def _scaled_mse(self, pred, ref, key):
+        scale = self.target_scales.get(key, 1.0)
+        scale = max(float(scale), 1e-12)
+        return jnp.mean(((pred - ref) / scale) ** 2)
 
     def loss_fn(self, variables, item):
         out = self.model.apply(variables, item['graph'], total_charge=item['total_q'])
         
-        # 1. Physical Anchor Loss (MBIS/Kappa)
-        q_loss = jnp.mean((out['q'] - item['q_ref'])**2)
-        k_loss = jnp.mean((out['kappa'] - item['k_ref'])**2)
-        
-        loss = 1.0 * q_loss + 0.1 * k_loss
+        alpha_ref = item.get("alpha_ref", item["k_ref"] * 0.001)
+        c6_ref = item.get("c6_ref", out["c6"])
+        c8_ref = item.get("c8_ref", out["c8"])
+        c10_ref = item.get("c10_ref", out["c10"])
+
+        q_loss = self._scaled_mse(out['q'], item['q_ref'], "q")
+        alpha_loss = self._scaled_mse(out['kappa'] * 0.001, alpha_ref, "alpha")
+        d_loss = self._scaled_mse(out['dipole'], item['d_ref'], "dipole")
+        qt_loss = self._scaled_mse(out['quadrupole'], item['qt_ref'], "quadrupole")
+        c6_loss = self._scaled_mse(out['c6'], c6_ref, "c6")
+        c8_loss = self._scaled_mse(out['c8'], c8_ref, "c8")
+        c10_loss = self._scaled_mse(out['c10'], c10_ref, "c10")
+
+        loss = (
+            self.loss_weights["q"] * q_loss
+            + self.loss_weights["alpha"] * alpha_loss
+            + self.loss_weights["dipole"] * d_loss
+            + self.loss_weights["quadrupole"] * qt_loss
+            + self.loss_weights["c6"] * c6_loss
+            + self.loss_weights["c8"] * c8_loss
+            + self.loss_weights["c10"] * c10_loss
+        )
         
         # 2. Slater Parameter Loss
         if item['slater_targets'] is not None:
@@ -97,19 +149,41 @@ class JointTrainer:
         return loss
 
     @partial(jax.jit, static_argnums=(0,))
-    def train_step(self, variables, opt_state, graph, q_ref, k_ref, d_ref, qt_ref, total_q, slater_targets=None):
+    def train_step(
+        self,
+        variables,
+        opt_state,
+        graph,
+        q_ref,
+        alpha_ref,
+        d_ref,
+        qt_ref,
+        c6_ref,
+        c8_ref,
+        c10_ref,
+        total_q,
+        slater_targets=None,
+    ):
         def local_loss(vars):
             out = self.model.apply(vars, graph, total_charge=total_q)
             
-            # 1. Physics Base Loss (Charges & Volume)
-            q_loss = jnp.mean((out['q'] - q_ref)**2)
-            k_loss = jnp.mean((out['kappa'] - k_ref)**2)
-            
-            # 2. Multipole Loss
-            d_loss = jnp.mean((out['dipole'] - d_ref)**2)
-            qt_loss = jnp.mean((out['quadrupole'] - qt_ref)**2)
-            
-            loss = 1.0 * q_loss + 0.1 * k_loss + 0.5 * d_loss + 0.5 * qt_loss
+            q_loss = self._scaled_mse(out['q'], q_ref, "q")
+            alpha_loss = self._scaled_mse(out['kappa'] * 0.001, alpha_ref, "alpha")
+            d_loss = self._scaled_mse(out['dipole'], d_ref, "dipole")
+            qt_loss = self._scaled_mse(out['quadrupole'], qt_ref, "quadrupole")
+            c6_loss = self._scaled_mse(out['c6'], c6_ref, "c6")
+            c8_loss = self._scaled_mse(out['c8'], c8_ref, "c8")
+            c10_loss = self._scaled_mse(out['c10'], c10_ref, "c10")
+
+            loss = (
+                self.loss_weights["q"] * q_loss
+                + self.loss_weights["alpha"] * alpha_loss
+                + self.loss_weights["dipole"] * d_loss
+                + self.loss_weights["quadrupole"] * qt_loss
+                + self.loss_weights["c6"] * c6_loss
+                + self.loss_weights["c8"] * c8_loss
+                + self.loss_weights["c10"] * c10_loss
+            )
             
             if slater_targets is not None:
                 # Log-scale MSE for A coefficients
@@ -154,8 +228,9 @@ def run_joint_training(dataset_path: str):
         for item in dataset:
             variables, opt_state, loss = trainer.train_step(
                 variables, opt_state, 
-                item['graph'], item['q_ref'], item['k_ref'], 
+                item['graph'], item['q_ref'], item['alpha_ref'], 
                 item['d_ref'], item['qt_ref'],
+                item['c6_ref'], item['c8_ref'], item['c10_ref'],
                 item['total_q'], item['slater_targets']
             )
             total_loss += loss

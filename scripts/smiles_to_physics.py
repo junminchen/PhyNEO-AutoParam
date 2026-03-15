@@ -34,7 +34,7 @@ def predict_parameters(smiles_list, weights_path=None):
             
             # 1. Save FF.xml
             xml_path = os.path.join(out_dir, "FF.xml")
-            generate_dmff_xml(mol_obj.rdmol, params, xml_path)
+            generate_dmff_xml(mol_obj.rdmol, params, xml_path, include_local_frames=True)
             
             # 2. Save PDB (Align atom names with XML)
             pdb_path = os.path.join(out_dir, "structure.pdb")
