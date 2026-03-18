@@ -55,6 +55,7 @@ def generate_ec_physics_plots():
         axes[i].set_ylabel('Predicted (PhyNEO)', fontsize=12)
         
         mae = jnp.mean(jnp.abs(y_p - y_r))
+        print(f"  - {title}: MAE = {mae:.6f}")
         axes[i].text(0.05, 0.95, f"MAE: {mae:.4f}", transform=axes[i].transAxes, 
                      verticalalignment='top', bbox=dict(boxstyle='round', facecolor='white', alpha=0.7))
         axes[i].grid(alpha=0.3)
