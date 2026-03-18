@@ -112,8 +112,8 @@ def run_joint_training(dataset_path: str):
     dataset = load_master_dataset(dataset_path)
     trainer = JointTrainer()
     
-    total_steps = len(dataset) * 5000
-    lr_schedule = optax.cosine_decay_schedule(init_value=1e-3, decay_steps=total_steps, alpha=1e-5)
+    total_steps = len(dataset) * 10000
+    lr_schedule = optax.cosine_decay_schedule(init_value=1e-3, decay_steps=total_steps, alpha=1e-6)
     trainer.optimizer = optax.adam(learning_rate=lr_schedule)
     
     rng = jax.random.PRNGKey(42)
@@ -121,10 +121,10 @@ def run_joint_training(dataset_path: str):
     variables = trainer.model.init(rng, sample['graph'], total_charge=sample['total_q'])
     opt_state = trainer.optimizer.init(variables)
     
-    print(f"=== Starting FULL PHYSICS Production Training [GPU] ===")
+    print(f"=== Starting DEEP PHYSICS Production Training [10000 Epochs] ===")
     best_loss = 1e10
     
-    for epoch in range(1, 5001):
+    for epoch in range(1, 10001):
         total_loss = 0.0
         random.shuffle(dataset)
         for item in dataset:
@@ -137,7 +137,7 @@ def run_joint_training(dataset_path: str):
             )
             total_loss += loss
         
-        if epoch % 500 == 0 or epoch == 1:
+        if epoch % 1000 == 0 or epoch == 1:
             avg_loss = total_loss / len(dataset)
             print(f"Epoch {epoch:5d} | Avg Loss: {avg_loss:.8f}", flush=True)
             if avg_loss < best_loss:
